@@ -112,6 +112,6 @@ resource "aws_lambda_event_source_mapping" "trigger" {
 module "default_tags" {
   source          = "git@github.com:facets-io/terraform-module-aws-tags-default.git?ref=0.0.1"
   additional_tags = var.tags
-  envrionment     = var.environment
+  environment     = var.environment
 }
 
