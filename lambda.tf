@@ -22,7 +22,7 @@ resource "aws_lambda_function" "lambda" {
   tags                           = module.default_tags.tags
   layers                         = var.layers
   s3_bucket                      = var.s3_bucket
-  source_code_hash               = var.source_code_hash == null || var.source_code_hash == "" ? filebase64sha512(var.filename) : var.source_code_hash
+  source_code_hash               = var.source_code_hash == null || var.source_code_hash == "" ? filebase64sha256(var.filename) : var.source_code_hash
   reserved_concurrent_executions = var.reserved_concurrent_executions
   memory_size                    = var.memory_size
   timeout                        = var.timeout
