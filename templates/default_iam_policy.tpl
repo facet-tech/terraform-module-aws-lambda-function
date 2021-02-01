@@ -14,6 +14,7 @@
         "ec2:describe*",
         "ec2:get*",
         "sqs:*",
+        "sns:*",
         "secretsmanager:GetSecretValue",
         "dynamodb:PutItem",
         "dynamodb:DeleteItem",
